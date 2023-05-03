@@ -1,0 +1,78 @@
+{
+  "uuid": "47f1d23a-b0bd-4621-9a2d-d69199f6f5c3",
+  "lastMigration": 27,
+  "name": "Supermarket API",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 8080,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "7936ef80-cb4a-42f4-90fc-49a459dcf680",
+      "type": "http",
+      "documentation": "Get Supermarkets available for carts",
+      "method": "get",
+      "endpoint": "supermarkets",
+      "responses": [
+        {
+          "uuid": "6e468294-0a93-49d2-aa35-98076c2b3730",
+          "body": "[\n  {\n    \"id\": 1,\n    \"name\": \"Carrefour\"\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Makro\"\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Assai\"\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "7936ef80-cb4a-42f4-90fc-49a459dcf680"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}
