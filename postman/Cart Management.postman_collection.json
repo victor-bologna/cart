@@ -1,0 +1,473 @@
+{
+	"info": {
+		"_postman_id": "cfca96a1-3c9a-4a42-a653-c42514a55c61",
+		"name": "Cart Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11173876"
+	},
+	"item": [
+		{
+			"name": "Create Cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"supermarketID\": \"1\",\r\n    \"items\":\r\n        {\r\n        \"Onions\": 15.50\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/cart",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"cart"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Cart",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"supermarketID\": \"3\",\r\n    \"items\":\r\n        {\r\n        \"Sauce\": 8.50,\r\n        \"Bicycle\": 106.20,\r\n        \"PC\": 500.2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/cart",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"cart"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 May 2023 00:36:06 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"5afcc030-dd6d-4cd7-93e1-fdfd6c3f97f7\",\n    \"supermarketID\": 3,\n    \"name\": \"Assai\",\n    \"items\": {\n        \"Sauce\": 8.5,\n        \"Bicycle\": 106.2,\n        \"PC\": 500.2\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Read Cart by Supermarket ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/cart/1",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"cart",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Read Cart by Supermarket ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/cart/3",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"cart",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 May 2023 00:36:11 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"5afcc030-dd6d-4cd7-93e1-fdfd6c3f97f7\",\n        \"supermarketID\": 3,\n        \"name\": \"Assai\",\n        \"items\": {\n            \"PC\": 500.2,\n            \"Sauce\": 8.5,\n            \"Bicycle\": 106.2\n        }\n    }\n]"
+				},
+				{
+					"name": "Read Cart by Supermarket ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/cart/1",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"cart",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 May 2023 00:49:52 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"0287d96d-fbd8-4da3-8459-c925b1bff93d\",\n        \"supermarketID\": 1,\n        \"name\": \"Carrefour\",\n        \"items\": {\n            \"PC\": 600.2,\n            \"Sauce\": 5.5\n        }\n    },\n    {\n        \"id\": \"029b6ebc-4c1e-45e7-98d5-5e00ed670efd\",\n        \"supermarketID\": 1,\n        \"name\": \"Carrefour\",\n        \"items\": {\n            \"Onions\": 15.5\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Read All Carts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/allCarts",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"allCarts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Read All Carts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/allCarts",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"allCarts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 May 2023 00:36:15 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"3ff7f91f-26ff-4609-9bb7-accc301a68bb\",\n        \"supermarketID\": 2,\n        \"name\": \"Makro\",\n        \"items\": {\n            \"Salt\": 5.5,\n            \"Onion\": 6.2\n        }\n    },\n    {\n        \"id\": \"5afcc030-dd6d-4cd7-93e1-fdfd6c3f97f7\",\n        \"supermarketID\": 3,\n        \"name\": \"Assai\",\n        \"items\": {\n            \"PC\": 500.2,\n            \"Sauce\": 8.5,\n            \"Bicycle\": 106.2\n        }\n    },\n    {\n        \"id\": \"da58e3bc-3416-4076-944b-eda497bf460b\",\n        \"supermarketID\": 1,\n        \"name\": \"Carrefour\",\n        \"items\": {\n            \"Chicken Breasts\": 10.5,\n            \"Bread\": 5.3\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Doc API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/v3/api-docs",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"v3",
+						"api-docs"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Doc API",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/v3/api-docs",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"v3",
+								"api-docs"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4463"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 May 2023 00:35:20 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"openapi\": \"3.0.1\",\n    \"info\": {\n        \"title\": \"Cart Management API\",\n        \"description\": \"RESTful API documentation for adding and reading cart items from MySQL database while validating carts from another api called Supermarket Management.\",\n        \"contact\": {\n            \"email\": \"victorbologna@hotmail.com\"\n        },\n        \"version\": \"1.0.0\"\n    },\n    \"servers\": [\n        {\n            \"url\": \"http://localhost:8081\",\n            \"description\": \"Supermarket Management API\"\n        }\n    ],\n    \"tags\": [\n        {\n            \"name\": \"Cart\",\n            \"description\": \"APIs for creating and reading carts with dates and their values.\"\n        }\n    ],\n    \"paths\": {\n        \"/cart\": {\n            \"post\": {\n                \"tags\": [\n                    \"Cart\"\n                ],\n                \"summary\": \"Create Cart into the database, if there's no Cart ID in Supermarket Manager API, then a CartNotFoundException is thrown.\",\n                \"operationId\": \"createCart\",\n                \"requestBody\": {\n                    \"content\": {\n                        \"application/json\": {\n                            \"schema\": {\n                                \"$ref\": \"#/components/schemas/CartRequest\"\n                            }\n                        }\n                    },\n                    \"required\": true\n                },\n                \"responses\": {\n                    \"201\": {\n                        \"description\": \"Cart created successfully.\",\n                        \"content\": {\n                            \"application/json\": {\n                                \"schema\": {\n                                    \"$ref\": \"#/components/schemas/CartResponse\"\n                                }\n                            }\n                        }\n                    },\n                    \"400\": {\n                        \"description\": \"Cart data missing.\",\n                        \"content\": {\n                            \"application/json\": {\n                                \"schema\": {\n                                    \"$ref\": \"#/components/schemas/ErrorResponse\"\n                                }\n                            }\n                        }\n                    },\n                    \"404\": {\n                        \"description\": \"Cart ID not found.\",\n                        \"content\": {\n                            \"application/json\": {\n                                \"schema\": {\n                                    \"$ref\": \"#/components/schemas/ErrorResponse\"\n                                }\n                            }\n                        }\n                    },\n                    \"500\": {\n                        \"description\": \"Internal Server Error.\",\n                        \"content\": {\n                            \"application/json\": {\n                                \"schema\": {\n                                    \"$ref\": \"#/components/schemas/ErrorResponse\"\n                                }\n                            }\n                        }\n                    }\n                }\n            }\n        },\n        \"/cart/{supermarketID}\": {\n            \"get\": {\n                \"tags\": [\n                    \"Cart\"\n                ],\n                \"summary\": \"Retrieve a specific Cart from the database, if there's no Cart ID in the database, then a CartNotFoundException is thrown.\",\n                \"operationId\": \"getByCartID\",\n                \"parameters\": [\n                    {\n                        \"name\": \"supermarketID\",\n                        \"in\": \"path\",\n                        \"description\": \"Cart ID name\",\n                        \"required\": true,\n                        \"schema\": {\n                            \"type\": \"integer\",\n                            \"format\": \"int64\"\n                        },\n                        \"example\": 1\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"Cart created successfully.\",\n                        \"content\": {\n                            \"application/json\": {\n                                \"schema\": {\n                                    \"type\": \"array\",\n                                    \"items\": {\n                                        \"$ref\": \"#/components/schemas/CartResponse\"\n                                    }\n                                }\n                            }\n                        }\n                    },\n                    \"404\": {\n                        \"description\": \"Cart ID not found.\",\n                        \"content\": {\n                            \"application/json\": {\n                                \"schema\": {\n                                    \"$ref\": \"#/components/schemas/ErrorResponse\"\n                                }\n                            }\n                        }\n                    },\n                    \"500\": {\n                        \"description\": \"Internal Server Error.\",\n                        \"content\": {\n                            \"application/json\": {\n                                \"schema\": {\n                                    \"$ref\": \"#/components/schemas/ErrorResponse\"\n                                }\n                            }\n                        }\n                    }\n                }\n            }\n        },\n        \"/allCarts\": {\n            \"get\": {\n                \"tags\": [\n                    \"Cart\"\n                ],\n                \"summary\": \"Read all Carts from the database\",\n                \"operationId\": \"getAllCarts\",\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"All Carts retrieved successfully.\",\n                        \"content\": {\n                            \"application/json\": {\n                                \"schema\": {\n                                    \"type\": \"array\",\n                                    \"items\": {\n                                        \"$ref\": \"#/components/schemas/CartResponse\"\n                                    }\n                                }\n                            }\n                        }\n                    },\n                    \"500\": {\n                        \"description\": \"Internal Server Error.\",\n                        \"content\": {\n                            \"application/json\": {\n                                \"schema\": {\n                                    \"$ref\": \"#/components/schemas/ErrorResponse\"\n                                }\n                            }\n                        }\n                    }\n                }\n            }\n        },\n        \"/clearCache\": {\n            \"delete\": {\n                \"tags\": [\n                    \"Cart\"\n                ],\n                \"summary\": \"Clear cache from the Supermarket database.\",\n                \"operationId\": \"clearSupermarketCache\",\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"Cache cleared successfully.\",\n                        \"content\": {\n                            \"*/*\": {\n                                \"schema\": {\n                                    \"$ref\": \"#/components/schemas/ClearCacheResponse\"\n                                }\n                            }\n                        }\n                    },\n                    \"500\": {\n                        \"description\": \"Internal Server Error.\",\n                        \"content\": {\n                            \"*/*\": {\n                                \"schema\": {\n                                    \"$ref\": \"#/components/schemas/ErrorResponse\"\n                                }\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    },\n    \"components\": {\n        \"schemas\": {\n            \"CartRequest\": {\n                \"required\": [\n                    \"supermarketID\"\n                ],\n                \"type\": \"object\",\n                \"properties\": {\n                    \"supermarketID\": {\n                        \"type\": \"integer\",\n                        \"description\": \"Supermarket ID\",\n                        \"format\": \"int64\",\n                        \"example\": 1\n                    },\n                    \"items\": {\n                        \"type\": \"object\",\n                        \"additionalProperties\": {\n                            \"type\": \"number\",\n                            \"description\": \"Items with values\",\n                            \"format\": \"double\"\n                        },\n                        \"description\": \"Items with values\",\n                        \"example\": {\n                            \"Tomato\": 10.1,\n                            \"Cake\": 20.5\n                        }\n                    }\n                },\n                \"description\": \"Cart Request\"\n            },\n            \"ErrorResponse\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"status\": {\n                        \"type\": \"string\",\n                        \"description\": \"Status\",\n                        \"example\": \"HTTP status message\"\n                    },\n                    \"message\": {\n                        \"type\": \"string\",\n                        \"description\": \"Message\",\n                        \"example\": \"Error message.\"\n                    },\n                    \"timestamp\": {\n                        \"type\": \"string\",\n                        \"description\": \"Timestamp of error\",\n                        \"format\": \"date-time\"\n                    }\n                },\n                \"description\": \"Error Response\"\n            },\n            \"CartResponse\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"id\": {\n                        \"type\": \"string\",\n                        \"description\": \"ID\",\n                        \"example\": \"1d236439-e3c0-405f-befb-8d085a95474a\"\n                    },\n                    \"supermarketID\": {\n                        \"type\": \"integer\",\n                        \"description\": \"Supermarket ID\",\n                        \"format\": \"int64\",\n                        \"example\": 1\n                    },\n                    \"name\": {\n                        \"type\": \"string\",\n                        \"description\": \"Supermarket name\",\n                        \"example\": \"Carrefour\"\n                    },\n                    \"items\": {\n                        \"type\": \"object\",\n                        \"additionalProperties\": {\n                            \"type\": \"number\",\n                            \"description\": \"Items with values\",\n                            \"format\": \"double\"\n                        },\n                        \"description\": \"Items with values\",\n                        \"example\": {\n                            \"Tomato\": 10.1,\n                            \"Cake\": 20.5\n                        }\n                    }\n                },\n                \"description\": \"Cart Response\"\n            },\n            \"ClearCacheResponse\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"message\": {\n                        \"type\": \"string\",\n                        \"description\": \"Message\",\n                        \"example\": \"Cache cleared successfully.\"\n                    }\n                },\n                \"description\": \"Clear Cache Response\"\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Clear Cache",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/clearCache",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"clearCache"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Clear Cache",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/clearCache",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"clearCache"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 May 2023 00:36:41 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Cache cleared successfully.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all Supermarkets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{supermarket}}/supermarkets",
+					"host": [
+						"{{supermarket}}"
+					],
+					"path": [
+						"supermarkets"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all Supermarkets",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{supermarket}}/supermarkets",
+							"host": [
+								"{{supermarket}}"
+							],
+							"path": [
+								"supermarkets"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "132"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 May 2023 00:37:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Carrefour\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Makro\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Assai\"\n    }\n]"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localhost",
+			"value": "http://localhost:8081",
+			"type": "string"
+		},
+		{
+			"key": "supermarket",
+			"value": "http://localhost:8080"
+		}
+	]
+}
